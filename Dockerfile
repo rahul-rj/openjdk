@@ -8,9 +8,9 @@ FROM rahuljain/base:1.0.0
 
 LABEL maintainer="rahuljain"
 
-ENV VERSION 1.8.0.161-3-SNAPSHOT
+ENV VERSION 1.8.0_161-b12
 ENV JAVA_VERSION=8 JAVA_UPDATE=161 JAVA_BUILD=12
 ENV JAVA_HOME=/usr PATH=/usr/bin:$PATH
 
-# install basic packages
+# installing openjdk
 RUN apk add --no-cache openjdk8=${JAVA_VERSION}.${JAVA_UPDATE}.${JAVA_BUILD}-r0 --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community  --allow-untrusted
